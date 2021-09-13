@@ -29,4 +29,9 @@ class StudentController extends Controller
         return back()->with('success','Image Upload successfully');
 
     }
+
+    public function index(){
+        $student = student::all();
+        return view('student.all_student', compact('student'));
+    }
 }

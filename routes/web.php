@@ -30,3 +30,11 @@ Route::resource('category', 'CategoryController');
 // student 
 Route::get('/student', 'StudentController@student');
 Route::Post('store/student', 'StudentController@store')->name('store.data');
+Route::get('all/student', 'StudentController@index');
+
+
+
+Route::get('/perents', 'perentsController@parentss');
+Route::Post('store/perents', 'perentsController@store')->name('store.perents');
+
+
