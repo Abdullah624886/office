@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,11 @@ Route::get('all/student', 'StudentController@index');
 
 Route::get('/perents', 'perentsController@parentss');
 Route::Post('store/perents', 'perentsController@store')->name('store.perents');
+
+
+
+
+Route::get('file', [FileController::class, 'create']); 
+Route::post('file', [FileController::class, 'store']);
 
 
